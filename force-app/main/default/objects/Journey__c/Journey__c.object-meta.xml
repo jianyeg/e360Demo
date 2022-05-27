@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <!--A list of action overrides on the object.-->
     <actionOverrides>
         <actionName>Accept</actionName>
+        <!--Default means the override uses a custom override provided by an installed package. 
+        If there isn’t one available, the standard Salesforce behavior is used.-->
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -40,23 +43,46 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
+    <!--Indicates records of this custom object type cannot be added to Chatter groups.-->
     <allowInChatterGroups>false</allowInChatterGroups>
+    <!--Indicates the deployment status of the object.-->
     <deploymentStatus>Deployed</deploymentStatus>
+    <!--Indicates the object is not enabled for activities.-->
     <enableActivities>false</enableActivities>
+    <!--When enabled, the object is classified as 
+    an Enterprise Application object for usage tracking.
+    When enabled, enableSharing and enableStreamingApi must also be enabled.-->
     <enableBulkApi>true</enableBulkApi>
+    <!--Indicates the object is not enabled for feed tracking. -->
     <enableFeeds>false</enableFeeds>
+    <!--Indicates the object is not enabled for history tracking.-->
     <enableHistory>false</enableHistory>
+    <!--Indicates the object is enabled for reports. -->
     <enableReports>true</enableReports>
+    <!--Indicates the object’s records can be found 
+    via SOSL and Salesforce searches.-->
     <enableSearch>true</enableSearch>
+    <!--When enabled, the object is classified as 
+    an Enterprise Application object for usage tracking.
+    When enabled, enableBulkApi and enableStreamingApi must also be enabled.-->
     <enableSharing>true</enableSharing>
+    <!--When enabled, the object is classified as 
+    an Enterprise Application object for usage tracking.
+    When enabled, enableBulkApi and enableSharing must also be enabled.-->
     <enableStreamingApi>true</enableStreamingApi>
     <label>Journey</label>
+    <!--The field that this object's name is stored in.-->
     <nameField>
         <label>Journey Name</label>
         <type>Text</type>
     </nameField>
+    <!--Plural version of the label value.-->
     <pluralLabel>Journeys</pluralLabel>
     <searchLayouts />
+    <!--Indicates the org-wide defaults for the object is ReadWrite.-->
     <sharingModel>ReadWrite</sharingModel>
+    <!--If the custom object, custom setting, 
+    or custom metadata type is packaged, 
+    it’s accessible to all subscribing orgs.-->
     <visibility>Public</visibility>
 </CustomObject>

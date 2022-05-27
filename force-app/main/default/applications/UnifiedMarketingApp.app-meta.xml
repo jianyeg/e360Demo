@@ -1,26 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
+        <!--Represents an action override for an application. 
+        Use it to create, update, edit, or delete action overrides.-->
         <actionName>View</actionName>
         <comment
         >Action override created by Lightning App Builder during activation.</comment>
         <content>Journey_Record_Page</content>
         <formFactor>Small</formFactor>
+        <!--This field is only valid if the actionName is a “create” type,
+        and type is set to visualforce.-->
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <!--A Flexipage AppActionOverride set to 
+        App Default can’t be deleted via Metadata API.-->
         <type>Flexipage</type>
+        <!--The name of the sObject type being overridden.-->
         <pageOrSobjectType>Journey__c</pageOrSobjectType>
     </actionOverrides>
     <brand>
+        <!--The color scheme and logo used for the app.-->
         <headerColor>#f5b342</headerColor>
+        <!--Indicates override the global theme for the org.-->
         <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
     </brand>
+    <!--For a mobile device using the Salesforce mobile app-->
     <formFactors>Small</formFactors>
+    <!--For a desktop using Lightning Experience-->
     <formFactors>Large</formFactors>
+    <!--Indicates the navigation not automatically creates temporary tabs settings.-->
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <!--Indicates navigation personalization is not disabled.-->
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Unified Marketing App</label>
+    <!--For a Lightning app with standard navigation-->
     <navType>Standard</navType>
+    <!--Represents the full Setup tree.-->
     <setupExperience>all</setupExperience>
+    <!--The list of tabs included in this application according to the tab order.-->
     <tabs>Journey__c</tabs>
     <tabs>standard-Campaign</tabs>
     <uiType>Lightning</uiType>

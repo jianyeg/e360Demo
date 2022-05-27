@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <!--Indicates which apps are visible to users assigned to this permission set.-->
     <applicationVisibilities>
         <application>UnifiedMarketingApp</application>
         <visible>true</visible>
     </applicationVisibilities>
+    <!--Indicates which fields are accessible to a user assigned to this permission set,
+    and the kind of access available (readable or editable).-->
     <fieldPermissions>
         <editable>true</editable>
+        <!--The API name of the field.-->
         <field>Journey__c.Name</field>
         <readable>true</readable>
     </fieldPermissions>
+    <!--Indicates the permission set does not require an associated active session.-->
     <hasActivationRequired>false</hasActivationRequired>
+    <!--The permission set label. Limit: 80 characters.-->
     <label>UMA User</label>
+    <!--Indicates the objects that are accessible to 
+    a user assigned to this permission set, 
+    and the kind of access available (create, read, edit, delete, and so on).-->
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
@@ -20,8 +29,11 @@
         <object>Journey__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <!--Indicates the tab visibility settings for this permission set.-->
     <tabSettings>
         <tab>Journey__c</tab>
+        <!--The tab is available on the All Tabs page 
+        and appears in the visible tabs for its associated app.-->
         <visibility>Visible</visibility>
     </tabSettings>
 </PermissionSet>
